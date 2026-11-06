@@ -1,0 +1,31 @@
+// ==============================
+// Tarjetas de destacados (Crea tu mazo, Últimas ediciones...)
+// ==============================
+
+.tarjeta {
+  // Título en Inter negrita, como en Figma
+  h2 {
+    font-family: $font-family-sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  // Las tres fotos con el mismo tamaño, aunque los originales sean distintos
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: $border-radius-lg;
+  }
+
+  // "Ver más" sin subrayado; solo se subraya al pasar el ratón o con el teclado
+  a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+}

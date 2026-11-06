@@ -1,0 +1,16 @@
+// Archivo principal: solo junta las piezas, aquí no van estilos
+
+// 1. Mis variables van antes de Bootstrap (las suyas usan !default)
+@import "partials/variables";
+
+// 2. Bootstrap desde la carpeta local
+@import "bootstrap/bootstrap";
+
+// 3. Mis estilos van después, para poder sobrescribir
+@import "partials/mixins";
+@import "partials/header";
+@import "partials/botones";
+@import "partials/tarjetas";
+@import "partials/footer";
+@import "partials/login";
+@import "partials/tema-oscuro";

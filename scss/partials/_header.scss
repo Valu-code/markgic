@@ -1,0 +1,52 @@
+// ==============================
+// Cabecera: logo, menú, iconos y buscador
+// ==============================
+
+// Logo dorado con la tipografía de los títulos
+.logo {
+  font-family: $headings-font-family;
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: $secondary;
+
+  &:hover,
+  &:focus {
+    color: $secondary;
+  }
+}
+
+// Enlaces del menú: blancos, y dorados al pasar el ratón
+.cabecera .navbar {
+  --bs-navbar-color: #{$white};
+  --bs-navbar-hover-color: #{$secondary};
+  --bs-navbar-active-color: #{$secondary};
+  font-weight: 600;
+}
+
+// Un poco más de aire entre Catálogo, Comunidad y Mi cuenta
+// (column-gap solo separa en horizontal, así que en el menú móvil no afecta)
+.cabecera .navbar-nav {
+  column-gap: 1rem;
+}
+
+// Carrito y usuario
+.nav-icono {
+  color: $white;
+  font-size: 1.5rem;
+
+  &:hover {
+    color: $secondary;
+  }
+
+  // Para quien navega con el teclado
+  &:focus-visible {
+    outline: 2px solid $secondary;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+// En escritorio el buscador no ocupa todo el ancho
+.buscador {
+  max-width: 420px;
+}

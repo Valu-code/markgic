@@ -1,0 +1,9 @@
+// Estilos del tema oscuro.
+#theme-toggle {
+  transition: all 0.2s ease-in-out;
+}
+@include color-mode(dark) {
+  .tarjeta img {
+    filter: brightness(0.85);
+  }
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarkGic | Compra, vende e intercambia cartas Magic</title>
+
+    <!-- Fuentes del UI Kit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Iconos del carrito y del usuario -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- ===== CABECERA ===== -->
+    <header class="cabecera bg-primary">
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark" aria-label="Menú principal">
+            <div class="container">
+                <a class="navbar-brand logo" href="index.html">MarkGic</a>
+
+                <!-- Iconos: siempre a la derecha, también en móvil -->
+                <div class="d-flex align-items-center gap-3 order-lg-last">
+                    <button id="theme-toggle" class="btn btn-outline-light btn-sm" type="button">Modo oscuro</button>
+                    <a href="#" class="nav-icono" aria-label="Carrito">
+                        <i class="bi bi-cart3" aria-hidden="true"></i>
+                    </a>
+                    <a href="login.html" class="nav-icono d-none d-lg-inline" aria-label="Mi perfil">
+                        <i class="bi bi-person-circle" aria-hidden="true"></i>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!-- Enlaces: en móvil se esconden dentro de la hamburguesa -->
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Comunidad</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html">Mi cuenta</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Buscador -->
+        <div class="container pb-4">
+            <form class="buscador mx-auto" role="search" action="#">
+                <label for="busqueda" class="visually-hidden">Buscar cartas</label>
+                <input class="form-control" type="search" id="busqueda" name="busqueda" placeholder="Buscador de cartas...">
+            </form>
+        </div>
+    </header>
+
+    <!-- ===== CONTENIDO ===== -->
+    <main class="flex-grow-1">
+        <!-- Portada -->
+        <section class="portada container text-center py-5">
+            <h1>Encuentra tus cartas Magic</h1>
+            <p class="lead mb-4">Compra, vende e intercambia cartas con otros jugadores</p>
+            <a href="#" class="btn btn-primary">Ver catálogo</a>
+        </section>
+
+        <!-- Destacados: 1 columna en móvil, 3 en escritorio -->
+        <section class="destacados container pb-5" aria-label="Destacados">
+            <div class="row g-5">
+                <div class="col-12 col-md-4">
+                    <article class="tarjeta">
+                        <h2 class="h6">Crea tu mazo</h2>
+                        <img src="img/crea-tu-mazo.png" alt="Mano sujetando cartas de Magic sobre una mesa llena de cartas">
+                        <a href="#" class="d-block mt-2 small">Ver más<span class="visually-hidden"> sobre crear tu mazo</span></a>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <article class="tarjeta">
+                        <h2 class="h6">Últimas ediciones</h2>
+                        <img src="img/ultimas-ediciones.png" alt="Caja de la edición de Magic de El Hobbit">
+                        <a href="#" class="d-block mt-2 small">Ver más<span class="visually-hidden"> sobre las últimas ediciones</span></a>
+                    </article>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <article class="tarjeta">
+                        <h2 class="h6">Intercambia con otros jugadores</h2>
+                        <img src="img/intercambia.png" alt="Varias cartas de Magic de distintos colores sobre fondo azul">
+                        <a href="#" class="d-block mt-2 small">Ver más<span class="visually-hidden"> sobre intercambiar cartas</span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== PIE ===== -->
+    <footer class="pie py-4">
+        <ul class="list-inline text-center mb-0">
+            <li class="list-inline-item"><a href="#">Ayuda</a></li>
+            <li class="list-inline-item"><a href="#">Contacto</a></li>
+            <li class="list-inline-item"><a href="#">Redes sociales</a></li>
+            <li class="list-inline-item"><small>© MarkGic 2026</small></li>
+        </ul>
+    </footer>
+
+    <!-- Primero Bootstrap (hamburguesa), después mi script -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

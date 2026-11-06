@@ -1,0 +1,86 @@
+// ==============================
+// Página de login: el formulario encima de la carta de Magic
+// ==============================
+
+.pagina-login {
+  background-color: $primary;
+}
+
+// La carta: la imagen exportada de Figma va de fondo
+.carta-login {
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 1 / 1.1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // Capa del verde de la página encima de la foto: la deja más apagada,
+  // como si tuviera menos opacidad. La ruta sale desde css/style.css, por eso "../img/"
+  background-image:
+    linear-gradient(rgba($primary, 0.35), rgba($primary, 0.35)),
+    url("../img/carta-login.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  // Esquinas redondeadas como en Figma (así no se ve el negro de la imagen)
+  border-radius: 3rem;
+  box-shadow: 0 1rem 2rem rgba($black, 0.35);
+
+  // Arriba deja sitio al título "MarkGic" de la imagen; a los lados, al borde de la carta
+  padding: 10.5rem 5.5rem 3.75rem;
+
+  // En móvil la carta es más pequeña, así que el margen también
+  @include media-breakpoint-down(sm) {
+    padding: 6.5rem 3rem 2rem;
+    border-radius: 1.75rem;
+  }
+}
+
+// El formulario es transparente: el óvalo ya viene en la imagen
+.ovalo-login {
+  width: 100%;
+
+  .form-label {
+    font-weight: 600;
+    color: $texto-oscuro;
+    margin-bottom: 0.25rem;
+  }
+
+  // Campos grises sin borde, como en el wireframe
+  .form-control {
+    background-color: #dcdcdc;
+    border: 0;
+    border-radius: 0;
+  }
+}
+
+// "Regístrate" y "Entrar" uno debajo del otro, centrados
+.botones-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  .btn {
+    min-width: 7rem;
+  }
+}
+
+.volver-login {
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  color: $secondary;
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
+}
+
+// En el login el pie es verde oscuro, como en Figma
+.pie-login {
+  background-color: $verde-oscuro;
+}

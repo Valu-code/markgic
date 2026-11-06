@@ -1,0 +1,25 @@
+// ==============================
+// Pie de página gris
+// ==============================
+
+.pie {
+  background-color: $gris-pie;
+  color: $white;
+  font-size: 0.875rem;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+
+  // El puntito "·" entre enlaces lo pone el CSS, no el HTML
+  li + li::before {
+    content: "·";
+    margin-right: 0.5rem;
+  }
+}

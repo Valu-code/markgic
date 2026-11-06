@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión | MarkGic</title>
+
+    <!-- Fuentes del UI Kit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="pagina-login d-flex flex-column min-vh-100">
+
+    <main class="flex-grow-1 d-flex flex-column align-items-center justify-content-center py-5 px-3">
+        <!-- La carta de Magic (imagen de fondo) con el formulario dentro -->
+        <section class="carta-login" aria-labelledby="titulo-login">
+            <h1 id="titulo-login" class="visually-hidden">Iniciar sesión en MarkGic</h1>
+
+            <!-- data-bs-theme="light": el formulario siempre claro, aunque esté el modo oscuro -->
+            <form id="login-form" class="ovalo-login" data-bs-theme="light" novalidate>
+                <div class="mb-3">
+                    <label for="usuario" class="form-label">Nombre de usuario</label>
+                    <input type="text" class="form-control" id="usuario" name="usuario" required minlength="3" autocomplete="username">
+                    <div class="invalid-feedback">Mínimo 3 caracteres.</div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" name="password" required minlength="6" autocomplete="current-password">
+                    <div class="invalid-feedback">Mínimo 6 caracteres.</div>
+                </div>
+
+                <!-- Botones pequeños y centrados, como en Figma -->
+                <div class="botones-login">
+                    <a href="#" class="btn btn-primary btn-sm">Regístrate</a>
+                    <button type="submit" class="btn btn-primary btn-sm">Entrar</button>
+                </div>
+            </form>
+        </section>
+
+        <a href="index.html" class="volver-login">← Volver al inicio</a>
+    </main>
+
+    <!-- ===== PIE ===== -->
+    <footer class="pie pie-login py-4">
+        <ul class="list-inline text-center mb-0">
+            <li class="list-inline-item"><a href="#">Ayuda</a></li>
+            <li class="list-inline-item"><a href="#">Contacto</a></li>
+            <li class="list-inline-item"><a href="#">Redes sociales</a></li>
+            <li class="list-inline-item"><small>© MarkGic 2026</small></li>
+        </ul>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

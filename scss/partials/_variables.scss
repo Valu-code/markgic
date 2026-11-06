@@ -1,0 +1,35 @@
+// ==============================
+// Variables de MarkGic
+// Sacadas del UI Kit de Figma
+// ==============================
+
+// Paleta (si en Figma el hex es distinto, cámbialo aquí y ya)
+$verde-markgic: #2f5d50;
+$verde-oscuro: #1f3d34;
+$dorado-markgic: #c9a227;
+$crema-fondo: #f8f6f0;
+$texto-oscuro: #1e1e1e;
+$rojo-error: #b3261e;
+$verde-exito: #0b8043;
+$gris-pie: #8c8c8c;
+
+// Le paso mis colores a Bootstrap
+$primary: $verde-markgic;
+$secondary: $dorado-markgic;
+$danger: $rojo-error;
+$success: $verde-exito;
+$body-bg: $crema-fondo;
+$body-color: $texto-oscuro;
+
+// Tipografías
+$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+$headings-font-family: "Inknut Antiqua", Georgia, serif;
+
+// Tamaños de títulos (H1 48px, H2 32px, H3 24px en Figma)
+$h1-font-size: 3rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.5rem;
+
+// Modo oscuro (las variables reales de Bootstrap 5.3)
+$body-bg-dark: #121212;
+$body-color-dark: #f4f4f4;
